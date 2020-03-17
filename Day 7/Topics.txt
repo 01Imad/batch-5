@@ -1,0 +1,80 @@
+Create First React App From Scratch.
+===================================
+    Required packages.
+    =================
+    npm i react react-dom --save
+    npm i @babel/core @babel/preset-env @babel/preset-react babel-loader css-loader html-webpack-plugin style-loader webpack webpack-cli webpack-dev-server --save-dev
+    
+    Create webpack.config.js file.
+    =============================
+    const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+    module.exports = {
+        entry : './app/index.js',
+        output :{
+            path : path.resolve(__dirname, 'dist'),
+            filename:'index_bundle.js'
+        },
+        module:{
+            rules: [
+                //babel - babel loader
+                {test : /\.(js)$/, use : 'babel-loader'},
+                //styles - css loader 
+                {test : /\.(css)$/, use : ['style-loader','css-loader']}
+            ]
+        },
+        mode : 'development',
+        plugins: [
+            new HtmlWebpackPlugin({
+            template: 'app/index.html'
+                })
+            ]
+        }
+        // Add the below line in package.json.
+        "babel": {
+            "presets": [
+                "@babel/preset-env",
+                "@babel/preset-react"
+            ]
+        }
+    //Add the below lines to scripts in package.json.
+    "create": "webpack",
+    "start": "webpack-dev-server --open" 
+
+    JSX:
+    ===
+        JSX stands for JavaScript XML.
+        JSX allows us to write HTML in React.
+        JSX makes it easier to write and add HTML in React.
+    
+    Rendering Child Components.
+    ==========================
+
+    Props.
+    =====
+    React allows us to pass information to a Component using something called props 
+    (stands for properties).
+
+    React without jsx.
+    =================
+    class Hello extends React.Component {
+            render() {
+                return <div>Hello {this.props.toWhat}</div>;
+            }
+        }
+
+    ReactDOM.render(
+        <Hello toWhat="World" />,
+        document.getElementById('root')
+    );
+    class Hello extends React.Component {
+            render() {
+                return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+            }
+        }
+
+    ReactDOM.render(
+        React.createElement(Hello, {toWhat: 'World'}, null),
+        document.getElementById('root')
+    );

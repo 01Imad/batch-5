@@ -1,0 +1,61 @@
+NodeJs:
+======
+    Node.js is an open source server environment.
+    Node.js is free.
+    Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.).
+    Node.js uses JavaScript on the server.
+
+Creating HTTP Server with NodeJs:
+================================
+    const http = require('http');
+    const port = 3000;
+
+    const server = http.createServer((req, res) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain');
+            res.end('Hello World\n');
+        });
+        server.listen(port, hostname, () => {
+        console.log(`Server running at ${port}`);
+    });
+
+NPM:
+===
+
+//npm proxy settings
+// npm config set strict-ssl false
+
+//set npm to run at http
+// npm config set registry "http://registry.npmjs.org/"
+
+//set npm to run
+// npm --proxy http://username:password@cacheaddress.com.br:80 install packagename
+
+Express js:
+==========
+    Fast, unopinionated, minimalist web framework for node.
+
+Middleware:
+==========
+    Middleware is a subset of chained functions called by the Express js routing 
+    layer before the user-defined handler is invoked. Middleware functions have \
+    full access to the request and response objects and can modify either 
+    of them.
+
+MVC:
+===
+    The Model View Controller (MVC) design pattern specifies that an application 
+    consist of a data model, presentation information, and control information.
+Express Router:
+==============
+    Use the express.Router class to create modular, mountable route handlers. 
+    A Router instance is a complete middleware and routing system; for this reason, 
+    it is often referred to as a “mini-app”.
+
+EJS(Template Engine):
+====================
+    Template engine helps to create an HTML template with minimal code. 
+    Also, it can inject data into HTML template at the client side and produce 
+    the final HTML.
+    EJS or Embedded Javascript Templating is a templating engine used by Node.js.
+

@@ -1,0 +1,110 @@
+DOM APP:
+=======
+Render an object in html.
+
+ES6 Syntax:
+==========
+    let and const.
+    Arrow Functions.
+    Template strings.
+    Object Destructuring.
+    Spread/Rest Operator.
+
+Prototypes:
+==========
+    JavaScript is a prototype based language, so, whenever we create a 
+    function, Object using JavaScript, JavaScript engine adds a prototype 
+    property inside a function, Prototype property is basically an object 
+    (also known as Prototype object), where we can attach methods and 
+    properties in a prototype object, which enables all the other objects 
+    to inherit these methods and properties.
+
+Constructor Functions:
+=====================
+    A constructor is a function that initializes an object. 
+
+Functional Instantiation:
+========================
+    With functional instantiation, we first create a function. Inside the 
+    function we create an empty object and add properties and methods to it. 
+    We then return this object.
+
+Functional Instantiation With Shared Methods:
+============================================
+    Methods are defined in another object. We then extend our object with 
+    these methods. In the end, we return the object. Every object created 
+    by functional shared instantiation will have a pointer to the same 
+    methods without duplication.
+
+Prototypal Instantiation:
+========================
+    Prototypal instantiation utilizes the prototype chain to create objects. 
+
+ES6 Class:
+=========
+    A class is a combination of function and object.
+
+Callbacks:
+=========
+    In JavaScript, functions are objects. Because of this, functions 
+    can take functions as arguments, and can be returned by other 
+    functions. Functions that do this are called higher-order functions. 
+    Any function that is passed as an argument is called a callback function.
+
+    "A callback is a function that is to be executed after another function 
+    has finished executing — hence the name ‘call back’."
+
+Promises:
+========
+    Promises are used to handle asynchronous operations in JavaScript. 
+    They are easy to manage when dealing with multiple asynchronous 
+    operations where callbacks can create callback hell leading to 
+    unmanageable code.
+    Benefits of Promises:
+    ====================
+        Improves Code Readability
+        Better handling of asynchronous operations
+        Better flow of control definition in asynchronous logic
+        Better Error Handling
+    A Promise has four states:
+    =========================
+        fulfilled: Action related to the promise succeeded
+        rejected: Action related to the promise failed
+
+        "A promise can be created using Promise constructor."
+        Example:
+        =======
+        var promise = new Promise(function(resolve, reject){
+                            //do something
+                        });
+
+        Example:
+            var promise = new Promise(function(resolve, reject) { 
+                                        const x = "one"; 
+                                        const y = "one"
+                                        if(x === y) { 
+                                            resolve(); 
+                                        } else { 
+                                            reject(); 
+                                        } 
+                                    }); 
+            
+            promise. 
+                then(function () { 
+                    console.log('Success'); 
+                }). 
+                catch(function () { 
+                    console.log('Some error has occured'); 
+                });
+
+Async/Await:
+===========
+    Async/Await is a type of Promise. 
+    It awaits for the promise to resolve/reject.
+
+Closures:
+========
+    A closure is the combination of a function bundled together 
+    with references to its surrounding state. 
+    In other words, a closure gives you access to an outer function's scope 
+    from an inner function.

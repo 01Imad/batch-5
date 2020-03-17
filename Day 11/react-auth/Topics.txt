@@ -1,0 +1,10 @@
+Auth app using private routes
+
+npm install react-router-dom --save --proxy url
+
+1.withRouter
+===============
+    withRouter is the built in fucntion for loading router props in nested components.
+2.Private Routes
+======
+3. Auth app:

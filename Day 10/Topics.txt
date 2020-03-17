@@ -1,0 +1,28 @@
+React-Router-Dom
+
+npm install react-router-dom --save --proxy url
+
+1.BrowserRouter
+===============
+    BrowserRouter is the router implementation.
+2.Link
+======
+    Link is your replacement for anchor tags.
+3.Link vs anchor tags:
+=====================
+
+4.Route 
+=======
+    Route is the conditionally shown component based on matching a path to a URL.
+5.Simple Navbar Example:
+========================
+6.Nested Routes Example:
+=======================
+7.Match,history and location props of Route component and Handling Url Parameters using match.params:
+====================================================================================================
+8.Handling 404 Errors using Switch Component:
+============================================
+9.Render method in Route component:
+==================================
+10. Passing Props in Route Component as a Callback function
+===========================================================

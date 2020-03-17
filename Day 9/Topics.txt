@@ -1,0 +1,51 @@
+PropTypes:
+=========
+    You can use prop-types to document the intended types of properties passed to components. 
+    React (and potentially other libraries—see the checkPropTypes() reference below) will 
+    check props passed to your components against those definitions, and warn in development 
+    if they don’t match.
+
+    Install:
+    =======
+    npm install prop-types --save
+
+Component LifeCycle:
+===================
+    Components are created (mounted on the DOM), grow by updating, and then die (unmount on DOM). 
+    This is referred to as a component lifecycle. There are different lifecycle methods that React 
+    provides at different phases of a component's life.
+
+    componentDidMount()
+    ===================
+    This method is called after the component gets mounted on the DOM. Like componentWillMount, 
+    it is called once in a lifecycle. Before the execution of this method, the render method is 
+    called (i.e., we can access the DOM). We can make API calls and update the state with the 
+    API response.
+
+    componentDidUpdate(prevProps, nextProps)
+    =======================================
+    This method is called just after the re-rendering of the component. After the new (updated) 
+    component gets updated on the DOM, the ‘componentDidUpdate’ method is executed. This method 
+    receives arguments like prevProps and prevState.
+
+    componentWillUnmount()
+    =====================
+    This method is called before the unmounting of the component takes place. Before the removal 
+    of the component from the DOM, ‘componentWillUnMount’ executes. This method denotes the end of 
+    the component’s lifecycle.
+
+Github App:
+==========
+
+Fetching api, Axios:
+===================
+    Promise based HTTP client for the browser and node.js
+    install
+    =======
+    npm install axios --save
+    Methods:
+    =======
+    axios.get(url)
+    axios.post(url, {data})
+    axios.put(url, {data})
+    axios.delete(url)

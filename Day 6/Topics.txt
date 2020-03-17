@@ -1,0 +1,85 @@
+Creating Rest Api using express:
+===============================
+    Create.
+    Read.
+    Update.
+    Delete.
+
+Controllers:
+===========
+    In addition to the views and routes the diagram shows "controllers" — functions 
+    that separate out the code to route requests from the code that actually processes 
+    requests.
+
+
+Destructuring:
+=============
+    The destructuring assignment syntax is a JavaScript expression that makes it possible to 
+    unpack values from arrays, or properties from objects, into distinct variables.
+
+    Object Destructuring:
+    ====================
+    const o = {p: 42, q: true};
+    const {p, q} = o;
+
+    console.log(p); // 42
+    console.log(q); // true 
+
+    Array destructuring:
+    ===================
+    Example:
+    =======
+    const foo = ['one', 'two', 'three'];
+
+    const [red, yellow, green] = foo;
+    console.log(red); // "one"
+    console.log(yellow); // "two"
+    console.log(green); // "three"
+
+File System:
+===========
+    Node.js includes fs module to access physical file system. The fs module is responsible for 
+    all the asynchronous or synchronous file I/O operations.
+
+    fs.readFile()
+    ============
+    fs.readFile(fileName [options], callback)
+    filename: Full path and name of the file as a string.
+    options: The options parameter can be an object or string which can include encoding and flag. 
+             The default encoding is utf8.
+    callback: A function with two parameters err and fd. This will get called when readFile operation completes.
+    
+    Example:
+    =======
+        var fs = require('fs');
+
+        fs.readFile('TestFile.txt', function (err, data) {
+                            if (err) throw err;
+
+            console.log(data);
+        });
+    The above example reads TestFile.txt (on Windows) asynchronously and executes callback function 
+    when read operation completes. This read operation either throws an error or completes successfully. 
+    The err parameter contains error information if any. The data parameter contains the content 
+    of the specified file.
+
+    fs.readFileSync()
+    ================
+        Example:
+        =======
+            var fs = require('fs');
+
+            var data = fs.readFileSync('dummyfile.txt', 'utf8');
+            console.log(data);
+
+Buffer in NodeJs:
+================
+    Buffer class which provides instances to store raw data similar to an array of integers.
+
+    Example:
+    =======
+        Syntax:
+        ======
+        Buffer.alloc(size, fill, encoding);
+
+        var buf = new Buffer.alloc(50, "Simply Easy Learning", "utf-8");
